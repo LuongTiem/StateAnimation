@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9ub-Cf-cCG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StatesAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-2q-LzE" customClass="StateAnimation" customModule="StatesAnimation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="292" width="249" height="83"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gFc-2q-LzE" secondAttribute="height" multiplier="3:1" id="b7I-yR-mWC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXr-2N-2cm">
+                                <rect key="frame" x="164.5" y="637" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6sP-eU-6ui"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gFc-2q-LzE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="16V-Uj-qj8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qXr-2N-2cm" secondAttribute="bottom" id="A4b-hl-HgM"/>
+                            <constraint firstItem="gFc-2q-LzE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:8" id="Mle-ES-k8b"/>
+                            <constraint firstItem="qXr-2N-2cm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ue6-z5-zJD"/>
+                            <constraint firstItem="gFc-2q-LzE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uOA-ab-N3Y"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="krZ-UO-QIL"/>
+                    <connections>
+                        <outlet property="animationView" destination="gFc-2q-LzE" id="ifA-N1-1VN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="136.28185907046478"/>
+        </scene>
+        <!--ViewB-->
+        <scene sceneID="I1V-VN-mXH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uev-r3-7cY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="viewB" id="qz1-6X-J2V" customClass="ViewB" customModule="StatesAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="91p-lR-8kZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="91r-Ci-Gbr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdL-iU-8Ac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eI-rJ-S4F" customClass="StateAnimation" customModule="StatesAnimation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="292" width="332" height="83"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5eI-rJ-S4F" secondAttribute="height" multiplier="4:1" id="jHR-Q8-DzS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5eI-rJ-S4F" firstAttribute="height" secondItem="gdL-iU-8Ac" secondAttribute="height" multiplier="1:8" id="Mop-c3-Ecu"/>
+                            <constraint firstItem="5eI-rJ-S4F" firstAttribute="centerY" secondItem="gdL-iU-8Ac" secondAttribute="centerY" id="Y5W-UW-NT6"/>
+                            <constraint firstItem="5eI-rJ-S4F" firstAttribute="leading" secondItem="gdL-iU-8Ac" secondAttribute="leading" id="x7x-5m-swB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="5eI-rJ-S4F" id="NYd-5g-Krp"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1855.2" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vMp-ed-Tjt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ub-Cf-cCG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9hb-rf-Ere">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sOY-KJ-Q4X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbS-hA-WCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
